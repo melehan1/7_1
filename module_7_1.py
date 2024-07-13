@@ -11,6 +11,7 @@ class Product:
 class Shop():
     def __init__(self):
         self.__file_name = 'products.txt'
+        self.file = open(self.__file_name, 'a')
 
     def get_products(self):
         file = open(self.__file_name, 'r')
@@ -18,7 +19,6 @@ class Shop():
 
     def add(self, *products):
         for i in products:
-            self.file = open(self.__file_name, 'a')
             self.file = open(self.__file_name, 'r')
             if i.name not in self.file.read():
                 self.file = open(self.__file_name, 'a')
